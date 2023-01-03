@@ -49,4 +49,44 @@ let z;
 // with the undefined variable, you can define the undefined, like it's displayed in y, or you can use "let" to achieve the same effect, like it's shown in z //
 
 console.log(typeof z);
+
+
+------------------------------------------------------------------------
+
+const name = 'John';
+const age = 30;
+
+// Concatenation //
+// The method below is considered old //
+
+console.log('My name is ' + name + ' and I am ' + age);
+
+//Template String//
+// This is the "new" method //
+
+const hello = `My name is ${name} and I am ${age}`;
+
+console.log(hello);
+
+--------------------------------------------------------------------------
+
+
+
+const s = 'Hello World!';
+
+//The command below is a property, therefore, it DOESN'T need another set of parenthesis//
+console.log(s.length);
+//The command below is a method (a funcion associated with an object), therefore, it NEEDS another set of parenthesis//
+console.log(s.toUpperCase());
+//To extract a substring out of this string, you need two indexes, with an start and an end//
+console.log(s.substring(0,5));
+//These can also be chained to each other, using a dot//
+console.log(s.substrain(0,5).toUpperCase());
+
+--------------------------------------------------------------------------
+
+//It is also possible to split a string into an array//
+
+const x = 'technology, computers, it, code';
+console.log(x.split(', '));
 */
