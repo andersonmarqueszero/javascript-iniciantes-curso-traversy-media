@@ -9,22 +9,22 @@ console.warn('This is a warning');
 
 -----------------------------------------------------------------------
 
-// variables: var (outdated), let, const //
-// with "let" it's possible to change the variable, like displayed below //
+// variables: var (outdated), let, const
+// with "let" it's possible to change the variable, like displayed below
 
 let age = 30;
 age = 31;
 
 console.log(age);
 
-// with "const" it's not possible to change the variable, the code below displays an error//
+// with "const" it's not possible to change the variable, the code below displays an error
 
 const age = 30;
 age = 31;
 
 console.log(age);
 
-// the tip is to always use "const", unless you know you want to reassign the variable, for example //
+// the tip is to always use "const", unless you know you want to reassign the variable, for example
 
 let score;
 
@@ -32,11 +32,11 @@ score = 10;
 
 console.log(score);
 
-// if you try to assign "const" in the example above, you will get an error, since you're required to input a value to your variable //
+// if you try to assign "const" in the example above, you will get an error, since you're required to input a value to your variable
 
 -----------------------------------------------------------------------
 
-// These are some examples of data types: String, Numbers, Boolean, null, undefined, Symbol //
+// These are some examples of data types: String, Numbers, Boolean, null, undefined, Symbol
 
 const name = 'John';
 const age = 30;
@@ -46,7 +46,7 @@ const x = null;
 const y = undefined;
 let z;
 
-// with the undefined variable, you can define the undefined, like it's displayed in y, or you can use "let" to achieve the same effect, like it's shown in z //
+// with the undefined variable, you can define the undefined, like it's displayed in y, or you can use "let" to achieve the same effect, like it's shown in z
 
 console.log(typeof z);
 
@@ -56,13 +56,13 @@ console.log(typeof z);
 const name = 'John';
 const age = 30;
 
-// Concatenation //
-// The method below is considered old //
+// Concatenation
+// The method below is considered old
 
 console.log('My name is ' + name + ' and I am ' + age);
 
-//Template String//
-// This is the "new" method //
+//Template String
+// This is the "new" method
 
 const hello = `My name is ${name} and I am ${age}`;
 
@@ -78,15 +78,77 @@ const s = 'Hello World!';
 console.log(s.length);
 //The command below is a method (a funcion associated with an object), therefore, it NEEDS another set of parenthesis//
 console.log(s.toUpperCase());
-//To extract a substring out of this string, you need two indexes, with an start and an end//
+//To extract a substring out of this string, you need two indexes, with an start and an end
 console.log(s.substring(0,5));
-//These can also be chained to each other, using a dot//
+//These can also be chained to each other, using a dot
 console.log(s.substrain(0,5).toUpperCase());
 
 --------------------------------------------------------------------------
 
-//It is also possible to split a string into an array//
+//It is also possible to split a string into an array
 
 const x = 'technology, computers, it, code';
 console.log(x.split(', '));
+
+--------------------------------------------------------------------------
+
+// Arrays - variables that hold multiple values
+
+//The following method isn't commonly used
+
+const numbers = new Array(1,2,3,4,5);
+
+console.log(numbers);
+
+// The following method is the one used the most
+
+const fruits = ['apples', 'oranges', 'pears'];
+
+//console.log(fruits);
+
+//In JavaScript you can have multiple data types within the same array, like a number or a boolean
+
+console.log(fruits[1])
+//This command above will call for the item in the second place, which is 'oranges'
+
+//REMINDER: Arrays are 'zero based', meaning that the first item is always zero.
+
+//To add another item in the array, you can use
+
+fruits[3] = 'grapes';
+
+console.log(fruits);
+
+//The two commands above will add 'grapes' to the fourth position in the array.
+
+//BE AWARE: The method above isn't the best way to add a variable to the array, since you may not know how many items the array has
+
+//To add an item to the end of the array, you can use ".push", regardless of quantity
+
+fruits.push('mangos');
+
+console.log(fruits);
+
+//To add an item to the beginning of the array, you can use ".unshift"
+
+fruits.unshift('strawberries');
+
+console.log(fruits);
+
+//To remove the last item of the array, you can use ".pop"
+
+fruits.pop();
+
+console.log(fruits);
+
+//If you wanna check to see if something is in the array, you can use "Array.isArray" within the console.log
+
+console.log(Array.isArray(fruits));
+
+//The method described above can check for a string within the aray as well, all you have to do is change "fruit" for any string
+
+//To get the index (position) of a certain value, you can use "".indexOf"
+
+console.log(fruits.indexOf('oranges'));
+
 */
