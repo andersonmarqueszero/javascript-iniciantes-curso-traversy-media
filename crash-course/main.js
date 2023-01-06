@@ -151,4 +151,56 @@ console.log(Array.isArray(fruits));
 
 console.log(fruits.indexOf('oranges'));
 
+--------------------------------------------------------------------------
 */
+
+// Object Literals
+
+const person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 30,
+    hobbies: ['music', 'movies', 'sports'],
+    address: {
+        street: '50 main st',
+        city: 'Boston',
+        state: 'MA'
+    }
+}
+
+console.log(person);
+
+//With the command above, you will get all the values.
+//To get a single value, all you have to do is a "dot sintax"
+
+console.log(person.firstName, person.lastName);
+
+//To get a string inside an array, you should do
+
+console.log(person.hobbies[1]);
+
+//To get a string inside an object, you should do
+
+console.log(person.address.city);
+
+//A method called "de-structuring" happens when you create a variable from the element you already created, for example
+
+const { firstName, lastName } = person;
+
+//You should notice that by doing this, you're not assigning new values, but pulling them out of your initial variables. To check this, you can do
+
+console.log(firstName);
+
+//The same can be done for an embedded object
+
+const { firstName, lastName, address: {city}} = person;
+
+console.log(city);
+
+//The structure described above is advanced, so it isn't recommended for beginners
+
+//You can also add new properties by doing
+
+person.email = 'john@gmail.com';
+
+console.log(person);
