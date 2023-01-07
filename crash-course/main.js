@@ -152,7 +152,6 @@ console.log(Array.isArray(fruits));
 console.log(fruits.indexOf('oranges'));
 
 --------------------------------------------------------------------------
-*/
 
 // Object Literals
 
@@ -204,3 +203,63 @@ console.log(city);
 person.email = 'john@gmail.com';
 
 console.log(person);
+
+--------------------------------------------------------------------------
+
+//Arrays of Objects
+
+const todos = [
+    {
+        id: 1,
+        text: 'Take out trash',
+        isCompleted: true
+    },
+    {
+        id: 2,
+        text: 'Meet with boss',
+        isCompleted: true
+    },
+    {
+        id: 3,
+        text: 'Dentist appt',
+        isCompleted: false
+    }
+];
+
+console.log(todos);
+
+//If you want to grab one of the objects within the array, you should .log the following:
+
+console.log(todos[1].text);
+
+//By doing that, you should grab the string 'Meeting with boss' from the text object within the array
+
+//JSON
+
+ //If you wanna convert the previous array into a JSON format, you should do the following
+
+const todos = [
+    {
+       "id": 1,
+       "text": "Take out trash",
+       "isCompleted": true
+    },
+    {
+       "id": 2,
+       "text": "Meet with boss",
+       "isCompleted": true
+    },
+    {
+       "id": 3,
+       "text": "Dentist appt",
+       "isCompleted": false
+    }
+ ];
+
+//Notice that the JSON is defined by "", then separated by , and defined within the same [] and {}, like an array
+
+const todoJSON = JSON.stringify(todos);
+console.log(todoJSON);
+
+--------------------------------------------------------------------------
+*/
