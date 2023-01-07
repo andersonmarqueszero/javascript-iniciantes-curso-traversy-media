@@ -317,3 +317,31 @@ for(let todo of todos) {
 
 --------------------------------------------------------------------------
 */
+
+//High order array methods
+
+//forEach, map, filter
+
+todos.forEach(function(todo) {
+    console.log(todo.text);
+});
+
+const todoText = todos.map(function(todo) {
+    return todo.text;
+});
+
+console.log(todoText);
+
+const todoCompleted = todos.filter(function(todo) {
+    return todo.isCompleted === true;
+});
+
+console.log(todoCompleted);
+
+const todoCompleted = todos.filter(function(todo) {
+    return todo.isCompleted === true;
+}).map(function(todo) {
+    return todo.text;
+})
+
+console.log(todoCompleted);
