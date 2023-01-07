@@ -262,7 +262,6 @@ const todoJSON = JSON.stringify(todos);
 console.log(todoJSON);
 
 --------------------------------------------------------------------------
-*/
 
 //For loop
 
@@ -274,6 +273,8 @@ for(let i = 0; i < 10; i++) {
     console.log(`For Loop Number: ${i}`);    
 }
 
+--------------------------------------------------------------------------
+
 //While loop
 
 let i = 0;
@@ -281,3 +282,38 @@ while(i < 10) {
     console.log(`While Loop Number ${i}`);
     i++;
 }
+
+--------------------------------------------------------------------------
+
+//Looping through arrays
+
+const todos = [
+    {
+        id: 1,
+        text: 'Take out trash',
+        isCompleted: true
+    },
+    {
+        id: 2,
+        text: 'Meet with boss',
+        isCompleted: true
+    },
+    {
+        id: 3,
+        text: 'Dentist appt',
+        isCompleted: false
+    }
+];
+
+for(let i = 0; i < todos.length; i++) {
+    console.log(todos[i].text);
+}
+
+//Looping the array using a for, of loop
+
+for(let todo of todos) {
+    console.log(todo.text);
+}
+
+--------------------------------------------------------------------------
+*/
