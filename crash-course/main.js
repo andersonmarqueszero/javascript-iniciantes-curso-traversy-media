@@ -316,7 +316,6 @@ for(let todo of todos) {
 }
 
 --------------------------------------------------------------------------
-*/
 
 //High order array methods
 
@@ -345,3 +344,65 @@ const todoCompleted = todos.filter(function(todo) {
 })
 
 console.log(todoCompleted);
+
+--------------------------------------------------------------------------
+
+//Conditionals
+
+const x = 4;
+
+if(x === 10) {
+    console.log('x is 10');
+} else if(x > 10) {
+    console.log('x is greater than 10');
+} 
+else {
+    console.log('x is less than 10');
+}
+
+const x = 4;
+const y = 11;
+
+//The || represents "or"
+
+if (x > 5 || y > 10) {
+    console.log('x is more than 5 or y is more than 10');
+}
+
+//The && represents "either"
+
+if (x > 5 && y > 10) {
+    console.log ('x is more than 5 and y is more than 10');
+}
+
+--------------------------------------------------------------------------
+
+//Turnary Operator
+
+const x = 11;
+
+//The ? represents "then" and : represents "else"
+
+const color = x > 10 ? 'red' : 'blue';
+
+console.log(color);
+
+//You can also apply "Switches"
+
+const x = 9;
+
+const color = x > 10 ? 'red' : 'blue';
+
+switch(color) {
+    case 'red':
+        console.log('color is red');
+        break;
+    case 'blue':
+        console.log('color is blue');
+        break;
+    default:
+        console.log('color is NOT red of blue');
+}
+
+--------------------------------------------------------------------------
+*/
