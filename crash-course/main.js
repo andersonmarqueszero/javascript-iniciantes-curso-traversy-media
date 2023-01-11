@@ -406,3 +406,18 @@ switch(color) {
 
 --------------------------------------------------------------------------
 */
+// Functions
+
+function addNums(num1 = 1, num2 = 1) {
+    return num1 + num2;
+}
+
+console.log(addNums(5, 5));
+
+//To turn the funcion above into an "arrow function", you should:
+
+const addNums = (num = 1, num2 = 1) => {
+    return num1 + num2;
+}
+
+console.log(addNums(5,5));
