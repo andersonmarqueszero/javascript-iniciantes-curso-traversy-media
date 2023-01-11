@@ -405,7 +405,7 @@ switch(color) {
 }
 
 --------------------------------------------------------------------------
-*/
+
 // Functions
 
 function addNums(num1 = 1, num2 = 1) {
@@ -421,3 +421,34 @@ const addNums = (num = 1, num2 = 1) => {
 }
 
 console.log(addNums(5,5));
+
+--------------------------------------------------------------------------
+
+// Since the example above only has one variable assigned, it can be rewritten in a cleaner way, using arrow functions
+
+const addNums = (num1 = 1, num2 = 1) => console.log(num1 + num2);
+
+addNums(5,5);
+
+//Also, if you wanna return something, you don't even need to use the "return" command
+
+const addNums = (num1 = 1, num2 = 1) => num1 + num2;
+
+console.log(addNums(5,5));
+
+//With a single parameter, you don't even need the parenthesis
+
+const addNums = num1 => num1 + 5;
+
+console.log(addNums(5));
+
+//This method is very useful to combine with something like "forEach"
+
+const addNums = num1 => num1 + 5;
+
+console.log(addNums(5));
+
+todos.forEach((todo) => console.log(todo));
+
+--------------------------------------------------------------------------
+*/
