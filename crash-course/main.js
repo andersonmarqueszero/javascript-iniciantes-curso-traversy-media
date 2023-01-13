@@ -451,7 +451,7 @@ console.log(addNums(5));
 todos.forEach((todo) => console.log(todo));
 
 --------------------------------------------------------------------------
-*/
+
 //Constructive Functions & Prototypes
 
 //Constructor Function
@@ -496,3 +496,31 @@ function Person(firstName, lastName, dob) {
 
 console.log(person1.getBirthYear());
 console.log(person1.getFullName());
+
+//Prototypes
+
+function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+    this.getBirthYear = function() {
+        
+    }
+    this.getFullName = function() {
+        
+    }
+}
+
+Person.prototype.getBirthYear = function() {
+    return this.dob.getFullYear();
+}
+
+Person.prototype.getFullName = function() {
+    return `${this.firstName} ${this.lastName}`;
+}
+
+console.log(person2.getFullName());
+console.log(person1);
+
+--------------------------------------------------------------------------
+*/
