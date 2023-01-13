@@ -520,7 +520,6 @@ console.log(person2.getFullName());
 console.log(person1);
 
 --------------------------------------------------------------------------
-*/
 
 //3S6 Classes
 
@@ -561,3 +560,24 @@ const person2 = new Person('Mary', 'Smith', '3-6-1970');
 
 console.log(person2.getFullName());
 console.log(person1);
+
+--------------------------------------------------------------------------
+
+//Window Object & DOM (document object model)
+
+//Single element
+
+//console.log(document.getElementById('my-form'));
+//console.log(document.querySelector('h1'));
+
+//Multiple element
+
+//console.log(document.querySelectorAll('.item'));
+//console.log(document.getElementByClassName('item'));
+//console.log(document.getElementByTagName('li'));
+
+const items = document.querySelectorAll('.item');
+
+items.forEach((item) => console.log(item));
+--------------------------------------------------------------------------
+*/
