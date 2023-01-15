@@ -580,4 +580,34 @@ const items = document.querySelectorAll('.item');
 
 items.forEach((item) => console.log(item));
 --------------------------------------------------------------------------
+
+//Manipulating the DOM (The User Interface)
+
+const ul = document.querySelector('.items');
+
+// ul.remove();
+//ul.lastElementChild.remove();
+ul.firstElementChild.textContent = 'Hello';
+ul.children[1].innerText = 'Brad';
+ul.lastElelementChild.innerHTML = '<h1>Hello</h1>';
+
+const btn = document.querySelector('.btn');
+btn.style.background = 'red';
+
+--------------------------------------------------------------------------
+
+//Events
+
+const btn = document.querySelector('.btn');
+
+btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('#my-form').style.background = '#ccc';
+    document.querySelector('body').classList.add('bg-dark');
+    document.querySelector('.items').lastElementChild.innerHTML = '<h1>Hello</h1>';
+});
+
+//The 'click' string could be changed to 'mouseover' to apply the same functions on mouse hover or 'mouseout' so the same can happen after you move the mouse out
+
+--------------------------------------------------------------------------
 */
